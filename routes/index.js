@@ -14,18 +14,18 @@ const Router = express.Router();
 Router.post("/addCustomer", addCustomer);
 
 // API 2
-Router.post("/addShippingDetails", addShippingDetails);
+Router.post("/addPurchaseDetails", addPurchaseDetails);
 
 // API 3
-Router.post("/addPurchaseDetails", addPurchaseDetails);
+Router.post("/addShippingDetails", addShippingDetails);
 
 // API 4
 Router.get("/getCustomersWithCityFilter", getCustomersWithCityFilter);
 
 // API 5
-Router.get("/getCustomerWithOrdersAndShipments", getCustomerWithOrdersAndShipments);
+Router.get("/customer_all_purchaseOrder", customer_all_purchaseOrder);
 
 // API 6
-Router.get("/customer_all_purchaseOrder", customer_all_purchaseOrder);
+Router.get("/getCustomerWithOrdersAndShipments", getCustomerWithOrdersAndShipments);
 
 export default Router;

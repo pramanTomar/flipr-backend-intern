@@ -3,7 +3,6 @@ import PurchaseDetails from "../models/purchase.js";
 import ShippingDetails from "../models/shippingDetails.js";
 import { error, success } from "../Utils/response.js";
 
-
 //Controller for API No 1
 export const addCustomer = async (req, res) => {
   try {
@@ -34,28 +33,6 @@ export const addCustomer = async (req, res) => {
 };
 
 // Controller for API No 2
-export const addShippingDetails = async (req, res) => {
-  try {
-    const { address, city, pincode, purchase_order_id, customer_id } = req.body;
-
-    const newShippment = await ShippingDetails.create({
-      address,
-      city,
-      pincode,
-      purchase_order_id,
-      customer_id,
-    });
-
-    await newShippment.save();
-
-    res.send(success(201, { newShippment }));
-  } catch (error) {
-    console.log(error);
-    res.send(error(500, "Something Went Wrong"));
-  }
-};
-
-// Controller for API No 3
 export const addPurchaseDetails = async (req, res) => {
   try {
     const {
@@ -82,6 +59,28 @@ export const addPurchaseDetails = async (req, res) => {
   } catch (error) {
     console.log(error);
     res.send(error(500, "Something went wrong"));
+  }
+};
+
+// Controller for API No 3
+export const addShippingDetails = async (req, res) => {
+  try {
+    const { address, city, pincode, purchase_order_id, customer_id } = req.body;
+
+    const newShippment = await ShippingDetails.create({
+      address,
+      city,
+      pincode,
+      purchase_order_id,
+      customer_id,
+    });
+
+    await newShippment.save();
+
+    res.send(success(201, { newShippment }));
+  } catch (error) {
+    console.log(error);
+    res.send(error(500, "Something Went Wrong"));
   }
 };
 
