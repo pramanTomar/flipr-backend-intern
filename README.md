@@ -1,5 +1,6 @@
 ## Flipr Backend Intern Task
-I have completed the assigned task of flipr-backend-intern which was supposed to be completed within 24 hours from the time of task assignment.
+I have completed the assigned task of flipr-backend-intern which was supposed to be completed within 24 hours from the time of task assignment. Also Published it on Postman. <br>
+Postman Published Doc Link:- [https://documenter.getpostman.com/view/31223498/2s9YXpVJPA](url)
 <br>
 The task consist of creating 6 API's of following fucntionalities:- <br> 
 1. Create API's through which we can add customers and their details. The details to be
